@@ -6,10 +6,22 @@ namespace MiddleLetter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a word");
             MiddleLetter middleletter = new MiddleLetter();
-            string input = Console.ReadLine();
-            Console.WriteLine(middleletter.GetMiddle(input));
+
+            while (true)
+            {
+                Console.WriteLine("Please enter a word");
+                string input = Console.ReadLine();
+                if(input != "quit")
+                {
+                    Console.WriteLine(middleletter.GetMiddle(input));
+
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
     }
 
