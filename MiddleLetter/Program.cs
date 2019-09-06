@@ -29,15 +29,17 @@ namespace GettingMiddleLetters
     {
         public string GetMiddle(string word)
         {
+            int half = word.Length;
+
             if (word.Length % 2 == 0)
             {
                 //.Substring retrieves a substring from this instance.
                 // The substring starts at a specified character position and has a specified length.
-                return word.Substring(word.Length / 2 - 1, 2);
+                return word.Substring(half / 2 - 1, 2);
             }
             else
             {
-                return word.Substring(word.Length / 2, 1);
+                return word.Substring(half / 2, 1);
             }
         }
     }
